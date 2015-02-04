@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F6ECE05-9ADB-40B0-AB7C-A17CFCD22B56}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwinCitiesCodeCamp</RootNamespace>
+    <AssemblyName>TwinCitiesCodeCamp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.3.3.3\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\..\SocialPresence\Components\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SocialPresence.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SocialPresence\Components\SocialPresence.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spackle">
+      <HintPath>..\..\SocialPresence\Components\Spackle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\ContributorsController.cs" />
+    <Compile Include="Controllers\PoliciesController.cs" />
+    <Compile Include="Controllers\InformationController.cs" />
+    <Compile Include="Controllers\HistoryController.cs" />
+    <Compile Include="Controllers\SpeakersController.cs" />
+    <Compile Include="Controllers\SessionsController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="FilterConfiguration.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contributors\ContributorsModel.cs" />
+    <Compile Include="Models\Event\EventIndexModel.cs" />
+    <Compile Include="Models\History\HistoryIndexModel.cs" />
+    <Compile Include="Models\Information\InformationIndexModel.cs" />
+    <Compile Include="Models\Policies\PoliciesIndexModel.cs" />
+    <Compile Include="Models\Schedule\ScheduleModel.cs" />
+    <Compile Include="Models\Sessions\SessionsModel.cs" />
+    <Compile Include="Models\Speakers\SpeakersModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routes\LegacyRoutesHandler.cs" />
+    <Compile Include="Routes\RouteConfiguration.cs" />
+    <Compile Include="WebContainerBuilderComposition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Styles.css" />
+    <Content Include="Error.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\AgileMedicine.png" />
+    <Content Include="Images\Apress.gif" />
+    <Content Include="Images\Avtex-Backup.png" />
+    <Content Include="Images\Avtex.png" />
+    <Content Include="Images\Bamboo.gif" />
+    <Content Include="Images\BeaconHill.png" />
+    <Content Include="Images\BenchmarkLearning.jpg" />
+    <Content Include="Images\BloomHealth.png" />
+    <Content Include="Images\BlueStraw.jpg" />
+    <Content Include="Images\BlueStrawHosting.jpg" />
+    <Content Include="Images\Cachet.png" />
+    <Content Include="Images\ChangeLane.png" />
+    <Content Include="Images\Cizer.jpg" />
+    <Content Include="Images\Code42.png" />
+    <Content Include="Images\CoDeMagazine.gif" />
+    <Content Include="Images\CodeMagazine.jpg" />
+    <Content Include="Images\CODEMagazine.png" />
+    <Content Include="Images\ComponentOne.jpg" />
+    <Content Include="Images\ComponentOne.png" />
+    <Content Include="Images\CreedInteractive.jpg" />
+    <Content Include="Images\Davannis.gif" />
+    <Content Include="Images\Dell.png" />
+    <Content Include="Images\DevelopMentor.jpg" />
+    <Content Include="Images\DevJam.jpg" />
+    <Content Include="Images\Digineer.jpg" />
+    <Content Include="Images\Dundas.jpg" />
+    <Content Include="Images\FluentSolutions.png" />
+    <Content Include="Images\GettyImages.png" />
+    <Content Include="Images\Github.png" />
+    <Content Include="Images\GlobeUniversity.JPG" />
+    <Content Include="Images\Growe.png" />
+    <Content Include="Images\HoneyBakedHam.jpg" />
+    <Content Include="Images\IlmService.gif" />
+    <Content Include="Images\Ineta.png" />
+    <Content Include="Images\Inetium.gif" />
+    <Content Include="Images\Informant.gif" />
+    <Content Include="Images\Infragistics.gif" />
+    <Content Include="Images\Intertech.jpg" />
+    <Content Include="Images\ITRMobility.png" />
+    <Content Include="Images\JetBrains.png" />
+    <Content Include="Images\KellyMitchell.jpg" />
+    <Content Include="Images\LCI.jpg" />
+    <Content Include="Images\Lifetime.png" />
+    <Content Include="Images\linqpad.png" />
+    <Content Include="Images\LogicNP.jpg" />
+    <Content Include="Images\Magenic.gif" />
+    <Content Include="Images\Magenic.png" />
+    <Content Include="Images\Manning.png" />
+    <Content Include="Images\MCconsulting_logo.bmp" />
+    <Content Include="Images\Mckinley.png" />
+    <Content Include="Images\Microsoft.gif" />
+    <Content Include="Images\Microsoft.png" />
+    <Content Include="Images\Mindsharp.png" />
+    <Content Include="Images\MNTechJobs.jpg" />
+    <Content Include="Images\NewHorizons.jpg" />
+    <Content Include="Images\Nitriq.png" />
+    <Content Include="Images\OReilly.gif" />
+    <Content Include="Images\PCMemoryStore.jpg" />
+    <Content Include="Images\Pearson.jpg" />
+    <Content Include="Images\Pluralsight.png" />
+    <Content Include="Images\PragProg.png" />
+    <Content Include="Images\RavenDB.png" />
+    <Content Include="Images\RBA.jpg" />
+    <Content Include="Images\RedGate.png" />
+    <Content Include="Images\RedWingIgnite.png" />
+    <Content Include="Images\RJS.jpg" />
+    <Content Include="Images\RJS.png" />
+    <Content Include="Images\RobertHalf.gif" />
+    <Content Include="Images\ScooterSoftware.png" />
+    <Content Include="Images\SierraBravo.gif" />
+    <Content Include="Images\SierraBravo.jpg" />
+    <Content Include="Images\Solutia.jpg" />
+    <Content Include="Images\SolutionDesign.jpg" />
+    <Content Include="Images\SolutionDesign.png" />
+    <Content Include="Images\SourceGear.png" />
+    <Content Include="Images\space150.jpg" />
+    <Content Include="Images\SqlSets.png" />
+    <Content Include="Images\Stackify.png" />
+    <Content Include="Images\SuperGoFaster.jpg" />
+    <Content Include="Images\SuperGoFaster.png" />
+    <Content Include="Images\SyncFusion.png" />
+    <Content Include="Images\Tekpub.png" />
+    <Content Include="Images\TekSystems.png" />
+    <Content Include="Images\Telerik.png" />
+    <Content Include="Images\TheNerdery.png" />
+    <Content Include="Images\ThomsonReuters.png" />
+    <Content Include="Images\ThomsonReutersFall2011.png" />
+    <Content Include="Images\ThomsonWest.jpg" />
+    <Content Include="Images\ThoughtWorks.gif" />
+    <Content Include="Images\Title-hires.jpg" />
+    <Content Include="Images\Title-Small.jpg" />
+    <Content Include="Images\Title.jpg" />
+    <Content Include="Images\topfunky.png" />
+    <Content Include="Images\Trackjs.png" />
+    <Content Include="Images\Twilio.png" />
+    <Content Include="Images\twitter.jpg" />
+    <Content Include="Images\twitter2.jpg" />
+    <Content Include="Images\TypeMock.png" />
+    <Content Include="Images\W3I.jpg" />
+    <Content Include="Images\Wipfli.jpg" />
+    <Content Include="Images\Wrox.gif" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Handouts\TCCC16.pdf" />
+    <None Include="Properties\PublishProfiles\TCCC.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Schedule\Spring2014.cshtml" />
+    <Content Include="Views\Sessions\Spring2014.cshtml" />
+    <Content Include="Views\Speakers\Spring2014.cshtml" />
+    <Content Include="Views\Contributors\Spring2014.cshtml" />
+    <Content Include="Views\History\Index.cshtml" />
+    <Content Include="Views\Information\Index.cshtml" />
+    <Content Include="Views\Policies\Index.cshtml" />
+    <Content Include="Views\Schedule\Fall2013.cshtml" />
+    <Content Include="Views\Contributors\Fall2013.cshtml" />
+    <Content Include="Views\Sessions\Fall2013.cshtml" />
+    <Content Include="Views\Speakers\Fall2013.cshtml" />
+    <Content Include="Views\Contributors\Spring2013.cshtml" />
+    <Content Include="Views\Schedule\Spring2013.cshtml" />
+    <Content Include="Views\Sessions\Spring2013.cshtml" />
+    <Content Include="Views\Speakers\Spring2013.cshtml" />
+    <Content Include="Views\Contributors\Fall2012.cshtml" />
+    <Content Include="Views\Schedule\Fall2012.cshtml" />
+    <Content Include="Views\Sessions\Fall2012.cshtml" />
+    <Content Include="Views\Speakers\Fall2012.cshtml" />
+    <Content Include="Views\Contributors\Spring2012.cshtml" />
+    <Content Include="Views\Schedule\Spring2012.cshtml" />
+    <Content Include="Views\Sessions\Spring2012.cshtml" />
+    <Content Include="Views\Speakers\Spring2012.cshtml" />
+    <Content Include="Views\Contributors\Fall2011.cshtml" />
+    <Content Include="Views\Schedule\Fall2011.cshtml" />
+    <Content Include="Views\Sessions\Fall2011.cshtml" />
+    <Content Include="Views\Speakers\Fall2011.cshtml" />
+    <Content Include="Views\Contributors\Spring2011.cshtml" />
+    <Content Include="Views\Schedule\Spring2011.cshtml" />
+    <Content Include="Views\Sessions\Spring2011.cshtml" />
+    <Content Include="Views\Speakers\Spring2011.cshtml" />
+    <Content Include="Views\Contributors\Fall2010.cshtml" />
+    <Content Include="Views\Schedule\Fall2010.cshtml" />
+    <Content Include="Views\Sessions\Fall2010.cshtml" />
+    <Content Include="Views\Speakers\Fall2010.cshtml" />
+    <Content Include="Views\Contributors\Spring2010.cshtml" />
+    <Content Include="Views\Schedule\Spring2010.cshtml" />
+    <Content Include="Views\Sessions\Spring2010.cshtml" />
+    <Content Include="Views\Contributors\Fall2009.cshtml" />
+    <Content Include="Views\Schedule\Fall2009.cshtml" />
+    <Content Include="Views\Sessions\Fall2009.cshtml" />
+    <Content Include="Views\Contributors\Spring2009.cshtml" />
+    <Content Include="Views\Schedule\Spring2009.cshtml" />
+    <Content Include="Views\Sessions\Spring2009.cshtml" />
+    <Content Include="Views\Contributors\Fall2008.cshtml" />
+    <Content Include="Views\Schedule\Fall2008.cshtml" />
+    <Content Include="Views\Sessions\Fall2008.cshtml" />
+    <Content Include="Views\Contributors\Spring2008.cshtml" />
+    <Content Include="Views\Schedule\Spring2008.cshtml" />
+    <Content Include="Views\Sessions\Spring2008.cshtml" />
+    <Content Include="Views\Contributors\Fall2007.cshtml" />
+    <Content Include="Views\Schedule\Fall2007.cshtml" />
+    <Content Include="Views\Sessions\Fall2007.cshtml" />
+    <Content Include="Views\Contributors\Spring2007.cshtml" />
+    <Content Include="Views\Schedule\Spring2007.cshtml" />
+    <Content Include="Views\Sessions\Spring2007.cshtml" />
+    <Content Include="Views\Contributors\Fall2006.cshtml" />
+    <Content Include="Views\Schedule\Fall2006.cshtml" />
+    <Content Include="Views\Sessions\Fall2006.cshtml" />
+    <Content Include="Views\Contributors\Fall2014.cshtml" />
+    <Content Include="Views\Schedule\Fall2014.cshtml" />
+    <Content Include="Views\Sessions\Fall2014.cshtml" />
+    <Content Include="Views\Speakers\Fall2014.cshtml" />
+    <Content Include="Views\Contributors\Spring2015.cshtml" />
+    <Content Include="Views\Schedule\Spring2015.cshtml" />
+    <Content Include="Views\Speakers\Spring2015.cshtml" />
+    <Content Include="Views\Sessions\Spring2015.cshtml" />
+    <Content Include="Views\Speakers\CallForSpeakers.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4582</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2429/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

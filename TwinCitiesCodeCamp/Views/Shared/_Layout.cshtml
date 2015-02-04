@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Twin Cities Code Camp</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Styles.css")" />
+</head>
+<body>
+    <div id="outer">
+        <form id="MainForm">
+            <div class="header">
+                <div class="logo">
+                    <img src="@Url.Content("~/Images/Title-Small.jpg")" />
+                </div>
+                <div class="nav">
+                    <span>
+                        @Html.ActionLink("Event", "Index", "Event") |
+                        @Html.ActionLink("Call For Speakers", "CallForSpeakers", "Speakers") |
+                        @Html.ActionLink("Schedule", "Spring2015", "Schedule") |
+                        @Html.ActionLink("Sessions", "Spring2015", "Sessions") |
+                        @Html.ActionLink("Speakers", "Spring2015", "Speakers") |
+                        @Html.ActionLink("Contributors", "Spring2015", "Contributors") |
+                        @Html.ActionLink("History", "Index", "History") |
+                        @Html.ActionLink("Information", "Index", "Information") |
+                        @Html.ActionLink("Policies", "Index", "Policies")
+                    </span>
+                </div>
+            </div>
+            <div class="contentWrapper">
+                @RenderBody()
+            </div>
+        </form>
+    </div>
+</body>
+</html>
